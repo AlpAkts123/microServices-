@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-        public static void Main(sbyte[] args)
+        public static void Main(string[] args)
         {
-
+            
         }
     }
 }

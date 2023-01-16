@@ -2,20 +2,25 @@
 
 namespace EventBusBase.Events
 {
-    public  class IntegrationEvent
+    public class IntegrationEvent
     {
         [JsonProperty]
         public Guid Id { get; private set; }
+
+        [JsonProperty]
         public DateTime CreatedDate { get; private set; }
+
+        [JsonConstructor]
         public IntegrationEvent()
         {
-            Id= Guid.NewGuid();
-            CreatedDate= DateTime.UtcNow;
+            Id = Guid.NewGuid();
+            CreatedDate = DateTime.Now;
         }
+
         [JsonConstructor]
-        public IntegrationEvent(Guid ıd, DateTime createdDate)
+        public IntegrationEvent(Guid id, DateTime createdDate)
         {
-            Id = ıd;
+            Id = id;
             CreatedDate = createdDate;
         }
     }
